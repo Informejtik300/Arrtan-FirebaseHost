@@ -1,8 +1,16 @@
 #pasek_nav_gorny{
     width: 90%;
-    height: 30px;
+    height: 20px;
     margin: auto;
+    font-size: 18px;
 }
 #pasek_nav_gorny span{
     float: left;
+}
+#pasek_nav_gorny a{
+    float: left;
+}
+#pasek_nav_gorny img{
+    width: 18px;
+    height: 18px;
 }
