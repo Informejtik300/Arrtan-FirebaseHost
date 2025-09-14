@@ -1,0 +1,8 @@
+#pasek_nav_gorny{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+}
+#pasek_nav_gorny span{
+    float: left;
+}
