@@ -4,13 +4,28 @@
     margin: auto;
     font-size: 18px;
 }
-#pasek_nav_gorny span{
+#pasek_nav_gorny #ramka{
     float: left;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 2px;
+    margin-left: 3px;
+    width: 150px;
+    height: 20px;
+}
+#pasek_nav_gorny #ramka:hover{
+    cursor: pointer;
+    background-color: #cccccc;
+}
+#pasek_nav_gorny #text{
+    margin-bottom: 5px;
+    float: right;
 }
 #pasek_nav_gorny a{
-    float: left;
+    float: right;
 }
 #pasek_nav_gorny img{
     width: 18px;
     height: 18px;
+    margin-top: 1px;
 }
