@@ -5,14 +5,22 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="styl.css">
         <link rel="icon" href="Zdjecia/Systemowe/logo.ico">
-        <script src="mainJava.js"></script>
     </head>
     <body>
         <nav id="pasek_nav_gorny">
-            <div id="ramka" onclick="zadzwon()"><img src="Zdjecia/Systemowe/phone-call.svg" alt="tel_icon"> <div id="text">+48 524 658 624</div></div>
-            <div id="ramka" onclick="window.location.href='mailto:kontakt@arrtan.pl'"><img src="Zdjecia/Systemowe/email-box.svg" alt="email_icon"> <div id="text">kontakt@artan.pl</div></div>
-            <a href="https://www.facebook.com/share/1BeRS2TXNS/"><img src="Zdjecia/Systemowe/facebook.svg" alt="facebook_icon"></a>
+            <div id="ramka" onclick="zadzwon()"><img id="phone-ico" src="Zdjecia/Systemowe/phone-call-black.svg" alt="tel_icon"> <div id="text">+48 524 658 624</div></div>
+            <div id="ramka" onclick="window.location.href='mailto:kontakt@arrtan.pl'"><img id="mail-box-ico" src="Zdjecia/Systemowe/email-box-black.svg" alt="email_icon"> <div id="text">kontakt@artan.pl</div></div>
+            <a href="https://www.facebook.com/share/1BeRS2TXNS/"><img id="facebook-ico" src="Zdjecia/Systemowe/facebook-black.svg" alt="facebook_icon"></a>
+            <label class="switch" id="motyw">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <img src="Zdjecia/Systemowe/dark-bright-black.svg" alt="theme" id="themeIcon">
         </nav>
         <hr>
+        <header>
+            <img id="baner" src="Zdjecia/Systemowe/banerArtan(szary).png" alt="baner">
+        </header>
+        <script src="mainJava.js"></script>
     </body>
 </html>
