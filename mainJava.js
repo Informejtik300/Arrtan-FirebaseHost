@@ -11,21 +11,16 @@ function zadzwon() {
 //Zmiana motywu
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
-themeToggle.addEventListener('change', function (){
-  body.classList.toggle("bodyDark", themeToggle.checked);
-  if(themeToggle.checked){
-    document.getElementById('phone-ico').href = "Zdjecia/Systemowe/phone-call-white.svg";
-    document.getElementById('mail-box-ico').href = "Zdjecia/Systemowe/email-box-white.svg";
-    document.getElementById('facebook-ico').href = "Zdjecia/Systemowe/facebook-white.svg";
-    document.getElementById('themeIcon').href = "Zdjecia/Systemowe/dark-bright-white.svg";
-    document.getElementById('baner').href = "Zdjecia/Systemowe/banerArtan(szary).png";
-    console.log("Ciemny motyw włączony");
-  } else {
-    document.getElementById('phone-ico').href = "Zdjecia/Systemowe/phone-call-black.svg";
-    document.getElementById('mail-box-ico').href = "Zdjecia/Systemowe/email-box-black.svg";
-    document.getElementById('facebook-ico').href = "Zdjecia/Systemowe/facebook-black.svg";
-    document.getElementById('themeIcon').href = "Zdjecia/Systemowe/dark-bright-black.svg";
-    document.getElementById('baner').href = "Zdjecia/Systemowe/banerArtan(szary).png";
-    console.log("Jasny motyw włączony");
+window.addEventListener("DOMContentLoaded", function (){
+  const theme = localStorage.getItem("theme");
+  if (theme === "true"){
+    themeToggle.checked = true;
+    body.classList.toggle("bodyDark", themeToggle.checked);
+    body.setAttribute("data-theme", themeToggle.checked ? "dark" : "light");
   }
+});
+themeToggle.addEventListener('change', function (){
+  localStorage.setItem("theme", themeToggle.checked);
+  body.classList.toggle("bodyDark", themeToggle.checked);
+  body.setAttribute("data-theme", themeToggle.checked ? "dark" : "light");
 });

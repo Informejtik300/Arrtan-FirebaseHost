@@ -1,6 +1,19 @@
-body{
-    
-}
+/* Bright mode */
+#phone-ico { content: url(Zdjecia/Systemowe/phone-call-black.svg); }
+#mail-box-ico { content: url(Zdjecia/Systemowe/email-box-black.svg); }
+#facebook-ico { content: url(Zdjecia/Systemowe/facebook-black.svg); }
+#themeIcon { content: url(Zdjecia/Systemowe/dark-bright-black.svg); }
+#baner { content: url(Zdjecia/Systemowe/banerArtan\(bialy\).png); }
+#pasek_nav_gorny .ramka{ border: 1px solid #151515; }
+#pasek_nav_gorny .ramka:hover{ background-color: #ccc; }
+/* Dark mode */
+body[data-theme="dark"] #phone-ico { content: url(Zdjecia/Systemowe/phone-call-white.svg); }
+body[data-theme="dark"] #mail-box-ico { content: url(Zdjecia/Systemowe/email-box-white.svg); }
+body[data-theme="dark"] #facebook-ico { content: url(Zdjecia/Systemowe/facebook-white.svg); }
+body[data-theme="dark"] #themeIcon { content: url(Zdjecia/Systemowe/dark-bright-white.svg); }
+body[data-theme="dark"] #baner { content: url(Zdjecia/Systemowe/banerArtan\(szary\).png); }
+body[data-theme="dark"] #pasek_nav_gorny .ramka{ border: 1px solid #cacaca; }
+body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050; }
 .bodyDark{
     background-color: #151515;
     color: #cacaca;
@@ -13,18 +26,16 @@ body{
     margin: auto;
     font-size: 18px;
 }
-#pasek_nav_gorny #ramka{
+#pasek_nav_gorny .ramka{
     float: left;
-    border: 1px solid #cacaca; /*#000000*/
     border-radius: 8px;
     padding: 2px;
     margin-left: 3px;
     width: 150px;
     height: 20px;
 }
-#pasek_nav_gorny #ramka:hover{
+#pasek_nav_gorny .ramka:hover{
     cursor: pointer;
-    background-color: #ccc;
 }
 #pasek_nav_gorny #text{
     margin-bottom: 5px;
