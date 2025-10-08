@@ -27,24 +27,40 @@ themeToggle.addEventListener('change', function () {
     body.setAttribute("data-theme", themeToggle.checked ? "dark" : "light");
 });
 
-// Tłumaczenie strony
+// Funkcja inicjalizująca Google Translate
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'pl',
+            includedLanguages: 'pl,en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
+}
+
+// Funkcja do wywołania tłumaczenia
 function translateTo(lang) {
     var googleSelect = document.querySelector("select.goog-te-combo");
     if (!googleSelect) {
-        // jeśli select nie jest jeszcze gotowy, spróbuj ponownie po 200ms
-        setTimeout(() => translateTo(lang), 200);
+        // jeśli select Google Translate nie jest gotowy, spróbuj ponownie
+        setTimeout(function() {
+            translateTo(lang);
+        }, 200);
         return;
     }
     googleSelect.value = lang;
     googleSelect.dispatchEvent(new Event("change"));
 }
+
+// Ładowanie widgetu Google Translate
 window.addEventListener('load', function () {
     var script = document.createElement('script');
-    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     document.body.appendChild(script);
-    // automatyczne przetłumaczenie na angielski, jeśli select jest gotowy
-    translateTo('en');
 });
+
+// Zmiana języka przez select użytkownika
 const languageSelect = document.getElementById('language');
 languageSelect.addEventListener('change', function () {
     translateTo(this.value);

@@ -1,0 +1,10 @@
+{
+  "name": "arrtan-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "if exist build rmdir /s /q build && mkdir build && xcopy /E /I /Y *.html build\\ && xcopy /E /I /Y *.js build\\ && xcopy /E /I /Y *.css build\\ && xcopy /E /I /Y Zdjecia build\\",
+    "start": "firebase serve"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

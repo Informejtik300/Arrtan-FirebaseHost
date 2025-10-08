@@ -16,6 +16,7 @@ body {
 #baner { content: url(Zdjecia/Systemowe/banerArtan\(bialy\).png); }
 #pasek_nav_gorny .ramka{ border: 1px solid #151515; }
 #pasek_nav_gorny .ramka:hover{ background-color: #ccc; }
+
 /* Dark mode */
 body[data-theme="dark"] #phone-ico { content: url(Zdjecia/Systemowe/phone-call-white.svg); }
 body[data-theme="dark"] #mail-box-ico { content: url(Zdjecia/Systemowe/email-box-white.svg); }
@@ -24,19 +25,19 @@ body[data-theme="dark"] #themeIcon { content: url(Zdjecia/Systemowe/dark-bright-
 body[data-theme="dark"] #baner { content: url(Zdjecia/Systemowe/banerArtan\(szary\).png); }
 body[data-theme="dark"] #pasek_nav_gorny .ramka{ border: 1px solid #cacaca; }
 body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050; }
-.bodyDark{
+.bodyDark {
     background-color: #151515;
     color: #cacaca;
 }
 
-/* ==== Pasek górny nawigacji ==== */
-#pasek_nav_gorny{
+/* Pasek górny nawigacji */
+#pasek_nav_gorny {
     width: 90%;
     height: 20px;
     margin: auto;
     font-size: 18px;
 }
-#pasek_nav_gorny .ramka{
+#pasek_nav_gorny .ramka {
     float: left;
     border-radius: 8px;
     padding: 2px;
@@ -44,34 +45,34 @@ body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050
     width: 150px;
     height: 20px;
 }
-#pasek_nav_gorny .ramka:hover{
+#pasek_nav_gorny .ramka:hover {
     cursor: pointer;
 }
-#pasek_nav_gorny #text{
+#pasek_nav_gorny #text {
     margin-bottom: 5px;
     float: right;
 }
-#pasek_nav_gorny a{
+#pasek_nav_gorny a {
     float: right;
     margin-top: 1px;
 }
-#pasek_nav_gorny img{
+#pasek_nav_gorny img {
     width: 18px;
     height: 18px;
     margin-top: 1px;
 }
-#pasek_nav_gorny select{
+#pasek_nav_gorny select {
     float: right;
     margin: 1px 12px 0 0;
     width: 200px;
 }
 /* Switch */
-#motyw{
+#motyw {
     float: right;
     margin-right: 40px;
     margin-top: -3px;
 }
-#themeIcon{
+#themeIcon {
     float: right;
     margin-right: 6px;
 }
@@ -117,8 +118,8 @@ body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050
     transform: translateX(19px);
 }
 
-/* ==== Baner strony ==== */
-header{
+/* Baner strony */
+header {
     width: fit-content;
     height: auto;
     min-width: max-content;
@@ -127,7 +128,7 @@ header{
     max-height: 400px;
     margin: auto;
 }
-header img{
+header img {
     max-width: 100%;
     min-height: 300px;
     max-height: 400px;
